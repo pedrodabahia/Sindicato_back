@@ -9,7 +9,7 @@ import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "usuario", schema = "sindidata")
+@Table(name = "usuario")
 public class usuario {
 
     @Id
