@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
  *
  * @author pedro
  */
-@CrossOrigin(origins = "http://127.0.0.1:5500")
+@CrossOrigin(origins = "https://sindicatosystem.netlify.app")
 @RestController
 @RequestMapping("/usuarios")
 public class usuarioController {
