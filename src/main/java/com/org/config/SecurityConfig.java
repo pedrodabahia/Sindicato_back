@@ -52,17 +52,18 @@ public class SecurityConfig {
     // Configuração de CORS
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
-public CorsConfigurationSource corsConfigurationSource() {
-    CorsConfiguration configuration = new CorsConfiguration(); // <- declare aqui
-    configuration.setAllowedOrigins(List.of(
-        "https://sindicatosystem.netlify.app" // front deployado
-    ));
-    configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-    configuration.setAllowedHeaders(List.of("*"));
-    configuration.setAllowCredentials(true);
+        CorsConfiguration configuration = new CorsConfiguration(); // declare a variável
+        configuration.setAllowedOrigins(List.of(
+            "http://127.0.0.1:5500",
+            "http://localhost:5500",
+            "https://sindicatosystem.netlify.app"
+        ));
+        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        configuration.setAllowedHeaders(List.of("*"));
+        configuration.setAllowCredentials(true);
 
-    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-    source.registerCorsConfiguration("/**", configuration);
-    return source;
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
     }
 }
