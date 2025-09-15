@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.org.controller;
 
 import com.org.entity.usuario;
@@ -38,7 +34,7 @@ public class usuarioController {
     @GetMapping(value = "/consulta")
     public ResponseEntity<?> consultaUsuario( @RequestParam Integer matricula, @RequestParam String cpf){
         boolean existe = usuarioServ.findByMatrizAndCpf(matricula,cpf).isPresent();
-        return ResponseEntity.ok(Collections.singletonMap('existe',existe));
+        return ResponseEntity.ok(Collections.singletonMap("existe",existe));
     }
     }
     
@@ -51,5 +47,3 @@ public class usuarioController {
     public ResponseEntity<List<usuario>> findAll(){
         return ResponseEntity.ok(usuarioServ.findAll());
     }
-
-}
