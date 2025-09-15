@@ -7,10 +7,13 @@ package com.org.repository;
 import com.org.entity.usuario;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.Opitional;
 
 /**
  *
  * @author pedro
  */
 public interface usuarioRepository extends JpaRepository<usuario, Long>{
+	Optional<usuario>
+	findByMatrizAndCpf(Integer matriz, String Cpf);
 }

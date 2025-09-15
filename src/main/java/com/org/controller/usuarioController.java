@@ -35,10 +35,11 @@ public class usuarioController {
     @Autowired
     private usuarioService usuarioServ;
     
-    @GetMapping(value = "/listar")
-    public List<usuario> list(){
-    System.out.println("recuperando alunos -----");
-    return usuarioServ.findAll();
+    @GetMapping(value = "/consulta")
+    public ResponseEntity<?> consultaUsuario( @RequestParam Integer matricula, @RequestParam String cpf){
+        boolean existe = usuarioServ.findByMatrizAndCpf(matricula,cpf).isPresent();
+        return ResponseEntity.ok(Collections.singletonMap('existe',existe));
+    }
     }
     
     @PostMapping
