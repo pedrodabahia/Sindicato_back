@@ -32,7 +32,7 @@ public class UsuarioController {
     @GetMapping(value = "/consulta")
     public ResponseEntity<?> consultaUsuario(@RequestParam Integer matricula,
                                              @RequestParam String cpf) {
-        boolean existe = usuarioServ.findByMatriculaAndCpf(matricula, cpf).isPresent();
+        boolean existe = usuarioServ.findByMatrizAndCpf(matricula, cpf).isPresent();
         return ResponseEntity.ok(Collections.singletonMap("existe", existe));
     }
 
