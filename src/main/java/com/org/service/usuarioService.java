@@ -45,8 +45,7 @@ public class usuarioService {
         return usuarioRepo.save(user);
     }
 
-    // ✅ Novo método para buscar por matricula e cpf
-    public Optional<usuario> findByMatrizAndCpf(Integer matricula, String cpf) {
-        return usuarioRepo.findByMatriculaAndCpf(matricula, cpf);
+    public Optional<usuario> findByMatrizAndCpf(Integer matriz, String cpf) {
+        return usuarioRepo.findByMatrizAndCpf(matriz, cpf);
     }
 }
