@@ -1,5 +1,7 @@
 package com.org.controller;
 
+import java.util.Collections;
+import org.springframwork.web.bind.annotation.RquestParam;
 import com.org.entity.usuario;
 import com.org.service.usuarioService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -36,7 +38,7 @@ public class UsuarioController {
         boolean existe = usuarioServ.findByMatrizAndCpf(matricula,cpf).isPresent();
         return ResponseEntity.ok(Collections.singletonMap("existe",existe));
     }
-    }
+    
     
     @PostMapping
     public void salvar (@RequestBody usuario user){
