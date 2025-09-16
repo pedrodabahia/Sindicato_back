@@ -7,7 +7,7 @@ package com.org.repository;
 import com.org.entity.usuario;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.data.jpa.repository.JpaRepository;
-import java.util.Opitional;
+import java.util.Optional;
 
 /**
  *
