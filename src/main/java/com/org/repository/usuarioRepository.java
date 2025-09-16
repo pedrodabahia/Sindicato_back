@@ -15,5 +15,5 @@ import java.util.Optional;
  */
 public interface usuarioRepository extends JpaRepository<usuario, Long>{
 	Optional<usuario>
-	findByMatrizAndCpf(Integer matriz, String Cpf);
+	findByMatriculaAndCpf(Integer matriz, String Cpf);
 }
