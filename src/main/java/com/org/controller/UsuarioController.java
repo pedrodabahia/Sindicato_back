@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  *
  * @author pedro
  */
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.OPTIONS})
 @RestController
 @RequestMapping("/usuarios")
 public class UsuarioController {
